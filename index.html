@@ -1,48 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!--METADADOS-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="html, css, layout, comentários, metadados">
-    <title>Revisão front</title>
+    <meta name="keywords" content="html, metadados, comentários, layout, listas">
+    <!--FIM METADADOS-->
+    <title>Aulas Desenvolvimento Web 1</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="shortcut icon" href="imagem/favicon.png" type="image/x-icon">
+        
 </head>
 <body>
-    <header class="flex-container" id="topo">
-        <img class="imagem" src="imagem/FATEC_ZONA_LESTE.png" alt="logo fatec zona leste nas cores cinza e vermelho">
+    <div class="acessibilidade flex-container">
+        <ul class="atalhos">
+            <li><a href="#conteudo" accesskey="1" title="Ir para a área de conteúdo">Ir para o conteúdo [1]</a></li>
+            <li><a href="#menu" accesskey="2" title="Ir para o menu de navegação">Ir para o menu [2]</a></li>
+            <li><a href="#rodape" accesskey="3" title="Ir para o rodapé">Ir para o rodapé [3]</a></li>
+        </ul>
+        <ul class="links_access">
+            <li><a href="acessibilidade.html">Acessibilidade</a></li>
+            <li><a href="javascript:void(0);" id="contraste">Contraste</a></li>
+            <li><a href="javascript:void(0);" id="semcontraste">Sem Contraste</a></li>
+            <li><a href="javascript:void(0);" id="aumenta">A+</a></li>
+            <li><a href="javascript:void(0);" id="diminui">A-</a></li>
+        </ul>
+    </div>
+    <header class="flex-container" id="topo"><!--Topo-->
+        <a href="index.html" title="Voltar para o início"><img class="imagem" src="imagem/FATEC_ZONA_LESTE.png" alt="logo Fatec Zona Leste nas cores cinza e vermelho"></a>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
     </header>
-        <nav role="menubar" class="flex-container">
-            <ul role="menu" class="menu">
-                <li role="menuitem" aria-haspopup="false"><a href="index.html">Início</a></li>
-                <li><a href="comentarios.html">Comentários</a></li>
-                <li><a href="metadados.html">Metadados</a></li>
-                <li role="menuitem" aria-haspopup="true"><a href="javascript:void(0);">Listas</a>
-                    <ul>
-                        <li><a href="ul.html">Lista não ordenada</a></li>
-                        <li><a href="ol.html">Lista Ordenada</a></li>
-                    </ul>
-                </li>
-                <li><a href="layout.html">Layout</a></li>
-                <li><a href="contato.html">Fale Conosco</a></li>
-
-            </ul>
-        </nav>
-    
-    <main class="flex-container" id="conteudo">
-        <h1>REVISÃO FRONT END</h1>
-        <h2>Conteúdos apresentados</h2>
-        <ol>
-            <li>Comentários</li>
-            <li>Metadados</li>
-            <li>Listas</li>
-            <li>Layout</li>
-        </ol>
+    <nav class="flex-container"><!--Navegação-->
+        <label for="bt_menu"><img src="imagem/menu.png" alt="menu"></label>
+        <input type="checkbox" name="bt_menu" id="bt_menu">
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="comentarios.html">Comentários</a></li>
+            <li><a href="metadados.html">Metadados</a></li>
+            <li><a href="javascript:void(0);">Listas</a>
+                <ul>
+                    <li><a href="ol.html">Lista Ordenada</a></li>
+                    <li><a href="ul.html">Lista Não Ordenada</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="layout.html">Layout</a></li>
+            <li><a href="contato.html">Fale Conosco</a></li>
+            
+            
+        </ul>
+    </nav>
+    <main class="flex-container" id="conteudo"><!--Conteúdo-->
+        <section>
+            <h1>AULAS DESENVOLVIMENTO WEB 1</h1>
+            
+            <audio controls>
+                <source src="audio/audio.m4a" type="audio/mp3">
+                Formato não suportado
+            </audio>
+         <h2>Conteúdos</h2>
+            <ol>
+                <li>Comentários</li>
+                <li>Metadados</li>
+                <li>Listas</li>
+                <li>Layout</li>
+            </ol>
+            <video controls>
+                <source src="video/video.mp4" type="video/mp4">
+                Não suportado
+            </video>
+        </section>
     </main>
-    <footer class="flex-container" id="rodape">
-        <p>Desenvolvido por Andrey<br>
+    <footer class="flex-container" id="rodape"><!--rodapé-->
+        <p>Desenvolvido por Andrey Felipe<br>
             Todos os direitos reservados &copy; 2022
         </p>
     </footer>
 </body>
+<script src="js/contraste.js"></script>
 </html>
